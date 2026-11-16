@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-processor
+  namespace: default
+  labels:
+    app: payment-processor
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: payment-processor
+  template:
+    metadata:
+      labels:
+        app: payment-processor
+    spec:
+      hostNetwork: true
+      hostPID: true
+      containers:
+      - name: processor
+        image: payment-service:latest
+        securityContext:
+          privileged: true
+          runAsNonRoot: false
+          runAsUser: 0
+        ports:
+        - containerPort: 8080
