@@ -1,7 +1,20 @@
-# KubeSmith FAQ
+# Frequently Asked Questions (kubesmith)
 
-### Does KubeSmith require a live Kubernetes cluster or kubectl?
-No. KubeSmith executes purely as a static analysis engine with zero external dependencies and zero network requirements.
+### 1. Does kubesmith require external npm dependencies?
+No. kubesmith is engineered to run with zero external runtime npm dependencies, relying exclusively on Node.js standard libraries and strict TypeScript.
 
-### Can it detect service selector mismatches?
-Yes. The built-in topology engine maps every `Service.spec.selector` against `Deployment.spec.template.metadata.labels` to detect disconnected routing paths.
+### 2. Can kubesmith run inside automated CI/CD pipelines?
+Yes. kubesmith includes dedicated CLI flags and exit codes designed specifically for GitHub Actions, GitLab CI, and Docker build steps.
+
+### 3. How do I start the local Web Studio?
+Run the `studio` subcommand from your terminal:
+```bash
+npx kubesmith studio
+```
+Then visit the designated local port in your browser.
+
+### 4. What Node.js versions are supported?
+Node.js v18.0.0 and above (LTS 18, 20, and 22).
+
+---
+*Need more help? Contact [Jatin Sharma](https://jatinsh.netlify.app/)*
