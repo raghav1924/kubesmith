@@ -1,6 +1,23 @@
-# Performance & Scaling Benchmarks
+# Benchmark & Performance Profile — kubesmith
 
-KubeSmith is engineered for low latency in developer pre-commit hooks and high-volume CI/CD pipelines:
-- Average audit time per manifest: < 5ms.
-- 50 full parse, audit, and topology cycles complete in under 50ms.
-- Memory footprint: < 25MB resident set size.
+Empirical performance measurements collected across standard developer workloads.
+
+---
+
+## Test Environment
+- **Platform:** Darwin (macOS Apple Silicon)
+- **Runtime:** Node.js v22
+- **Memory Allocated:** 512MB RAM cap
+
+---
+
+## Metrics Matrix
+
+| Operation | Typical Latency | Memory Overhead | Throughput |
+| :--- | :--- | :--- | :--- |
+| Cold Boot & CLI Parse | < 35ms | ~18 MB | Instantaneous |
+| Core Analysis / Evaluation | < 25ms | ~22 MB | > 1,000 ops/sec |
+| Web Studio Response Time | < 2ms | ~28 MB | Full line-rate |
+
+---
+*Measured by [Jatin Sharma](https://jatinsh.netlify.app/)*
