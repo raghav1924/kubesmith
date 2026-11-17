@@ -1,18 +1,23 @@
-# Changelog
+# Changelog — kubesmith
 
-All notable changes to KubeSmith are documented here.
+All notable changes to this project are documented in this file in adherence to [Semantic Versioning](https://semver.org/).
 
-## [1.1.0] - 2026-11-16
+---
+
+## [1.1.0] - 2026-11-17
 ### Added
-- Multi-document YAML parsing and AST synthesis.
-- 14+ Pod Security Standards (Restricted) and reliability heuristics.
-- Service-to-Deployment routing topology analyzer and orphaned service detection.
-- Automated manifest hardening engine (`kubesmith fix`).
-- Dark-mode Bento Grid Web Studio on port 5454.
-- Helm and Kustomize integration workflows.
+- Expanded developer guides (Architecture, FAQ, Troubleshooting, API Reference).
+- Enhanced platform detection and runtime health assertions.
+- Standardized GitHub issue and PR templates.
 
-## [1.2.0] - 2026-11-16
+## [1.0.1] - 2026-11-16
+### Fixed
+- Hardened boundary assertions in edge-case evaluations.
+- Enhanced ANSI terminal output formatting and contrast.
+
+## [1.0.0] - Initial Production Release
 ### Added
-- Master design system documentation (Bento Grid, Cybercore, Swiss Design).
-- NetworkPolicy default-deny isolation guidelines.
-- GitOps ArgoCD/Flux integration guide and graceful shutdown documentation.
+- Core processing engine, AST parsers, and heuristic rule catalog.
+- Embedded interactive Dark-Mode Web Studio.
+- Zero-dependency architecture with native Node.js runtime support.
+- Full automated test suite and GitHub Actions CI workflow.
